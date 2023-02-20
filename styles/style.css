@@ -1,0 +1,22 @@
+* {
+
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 3.2em);
+}
+
+.square {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: solid pink 1px;
+}
