@@ -1,3 +1,4 @@
+let active = 0;
 let color = "black";
 let gridSize = 16;
 
@@ -7,6 +8,7 @@ function createStartingGrid () {
 
     const container = document.querySelector("#container");
     const clearButton = document.querySelector("#clear");
+    const newGridButton = document.querySelector("#new-grid");
 
     container.style.gridTemplateRows = `repeat(${gridSize},1fr)`;
     container.style.gridTemplateColumns = `repeat(${gridSize},1fr)`;
@@ -25,11 +27,23 @@ function createStartingGrid () {
         }
     }
 
-    clearButton.addEventListener("click", () => {
+    if( active === 0) {
 
-        clearTheBoard( container );
+        clearButton.addEventListener("click", () => {
 
-    })
+            clearTheBoard( container );
+
+        });
+
+        newGridButton.addEventListener("click", () => {
+
+            createNewBoard( container );
+
+        })
+
+        active = 1;
+
+    }
 
 }
 
@@ -53,6 +67,25 @@ function clearTheBoard( gridContainer ) {
     }
 
     createStartingGrid();
+
+}
+
+function createNewBoard ( gridContainer ) {
+
+    let gridSizeTemp = parseInt(prompt("Please enter a size for the new grid"));
+    
+    if (gridSizeTemp <100 && gridSizeTemp > 1) {
+        
+        gridSize = gridSizeTemp;
+
+        clearTheBoard( gridContainer );
+
+    }else {
+
+        alert("Please enter a number less than a 100 and more than 1");
+
+    }
+
 
 }
 
