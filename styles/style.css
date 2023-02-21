@@ -64,9 +64,35 @@ body {
     background-color: #BCA0BC;
 }
 
+#rgb-buttons {
+    display: flex;
+    gap: 10px;
+    align-self: center;
+    margin-top: 45px;
+}
 
+#red,
+#green,
+#blue {
+    flex: auto;
+    padding: 30px 0;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
 
 .square {
     display: inline-block;
     border: solid #F9B9F2 1px;
 }
+
+

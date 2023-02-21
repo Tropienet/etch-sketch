@@ -9,6 +9,9 @@ function createStartingGrid () {
     const container = document.querySelector("#container");
     const clearButton = document.querySelector("#clear");
     const newGridButton = document.querySelector("#new-grid");
+    const redButton = document.querySelector("#red");
+    const greenButton = document.querySelector("#green");
+    const blueButton = document.querySelector("#blue");
 
     container.style.gridTemplateRows = `repeat(${gridSize},1fr)`;
     container.style.gridTemplateColumns = `repeat(${gridSize},1fr)`;
@@ -31,6 +34,8 @@ function createStartingGrid () {
 
         clearButton.addEventListener("click", () => {
 
+            color = "black"
+
             clearTheBoard( container );
 
         });
@@ -39,6 +44,28 @@ function createStartingGrid () {
 
             createNewBoard( container );
 
+        });
+
+        redButton.addEventListener("click", () => {
+
+            color = "red";
+
+            clearTheBoard();
+
+        });
+
+        greenButton.addEventListener("click", () => {
+
+            color = "green";
+
+            clearTheBoard();
+        });
+
+        blueButton.addEventListener("click", () => {
+
+            color = "blue";
+
+            clearTheBoard();
         })
 
         active = 1;
