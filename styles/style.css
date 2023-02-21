@@ -9,12 +9,23 @@ body {
     height: 100vh;
 }
 
+#site-container {
+    display: flex;
+}
 
+#menu {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#clear {
+    align-self: center;
+    margin: 5em 0;
+}
 
 #container {
     display: grid;
-    grid-template-columns: repeat(64, 1fr);
-    grid-template-rows: repeat(64, 1fr);
     width: 800px;
     height: 800px;
 }
