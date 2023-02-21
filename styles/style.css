@@ -7,10 +7,23 @@
 body {
     width: 100%;
     height: 100vh;
+    background-color: #FAD8D6;
+    margin: 0;
 }
 
 #site-container {
     display: flex;
+}
+
+#header {
+    background-color: #2E282A;
+    padding: 1.1em;
+}
+
+#title {
+    text-align: center;
+    color: #C0BCB5;
+    margin: 0.4em 0;
 }
 
 #menu {
@@ -45,11 +58,15 @@ body {
     display: grid;
     width: 800px;
     height: 800px;
+    margin: 20px 0 0 20px;
+    border: 1px solid black;
+    padding: 2px;
+    background-color: #BCA0BC;
 }
 
 
 
 .square {
     display: inline-block;
-    border: solid pink 1px;
+    border: solid #F9B9F2 1px;
 }
