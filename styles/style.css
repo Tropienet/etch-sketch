@@ -19,9 +19,26 @@ body {
     width: 50%;
 }
 
-#clear {
+#button-container {
     align-self: center;
     margin: 5em 0;
+}
+
+#clear,
+#new-grid {
+    margin: 0 4em;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #2E282A;
+    background-color: #17BEBB;
+    font-size: 1.2em;
+    color: #EF3E36;
+    transition: all 0.1s ease-in-out;
+}
+
+#clear:hover,
+#new-grid:hover {
+    transform: scale(1.2) perspective(1px);
 }
 
 #container {
